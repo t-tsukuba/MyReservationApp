@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reservation Form</title>
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.css' rel='stylesheet'/>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js'></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/plugins/confirmDate/confirmDate.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/plugins/confirmDate/confirmDate.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"/>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<div id='calendar'></div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+            views: {
+                dayGrid3Weeks: {
+                type: 'dayGrid',
+                duration: { weeks: 3 },
+                titleFormat: { month: 'numeric', day: 'numeric' },
+                },
+            },
+            initialView: 'dayGrid3Weeks',
+            dayCellClassNames: function(arg) {
+                var date = arg.date;
+                var day = date.getDay();
+                if (day === 0 || day === 6) { // 日曜日 (0) または土曜日 (6)
+                    return ['weekend'];
+                }
+                return [];
+            },
+            headerToolbar: {
+                left: 'prev,next today',
+                center: 'title',
+                right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+            },
+            allDaySlot: false, // allDayスロットを非表示にする
+            businessHours:{
+            daysOfWeek: [1, 2, 3, 4, 5],
+            startTime: "10:00",
+            endTime: "18:00",
+            }, // コアタイムを設定
+            nowIndicator: true, // 現在時刻を表示
+            events: function(fetchInfo, successCallback, failureCallback) {
+                var urlParams = new URLSearchParams(window.location.search);
+                var sortEquipmentType = urlParams.get('sortEquipmentType');
+                $.ajax({
+                    url: '/sorted-reservations',
+                    method: 'GET',
+                    data: { sortEquipmentType: sortEquipmentType },
+                    success: function(data) {
+                        //console.log(data); // デバッグ用にレスポンスをログに出力
+                        var events = data.map(function(reservation) {
+                            return {
+                                id: reservation.id, // 予約IDを追加
+                                title: reservation.name,
+                                start: reservation.startDate,
+                                end: reservation.endDate,
+                                type: reservation.equipmentType,
+                                details: reservation.details,
+                                display: 'block', // イベントを帯状に表示
+                                extendedProps: {
+                                    details: reservation.details // 予約の詳細情報
+                                }
+                            };
+                        });
+                        successCallback(events);
+                    },
+                    error: function() {
+                        console.error('Error fetching reservations'); // エラーメッセージをログに出力
+                        failureCallback();
+                    }
+                });
+            },
+
+            eventContent: function(arg) {
+                // カレンダーの帯に表示するHTMLをカスタマイズ
+                var customHtml = `
+                    <div class="fc-event-title">${arg.event.extendedProps.type} (${arg.event.title})</div>
+                    <div class="fc-event-time">${formatTime(arg.event.start)}-${formatTime(arg.event.end)} ${arg.event.extendedProps.details}</div>
+                `;
+                return { html: customHtml };
+            },
+            eventDidMount: function(arg) {
+                // イベントにクラスを追加
+                arg.el.classList.add(`${arg.event.extendedProps.type}-event`);
+                if (arg.event.extendedProps.details) {
+                    // イベントにツールチップを追加
+                    tippy(arg.el, {
+                        content: arg.event.extendedProps.details,
+                    });
+                }
+            },
+
+        });
+        calendar.render();
+    });
+
+    // 日時をローカルタイムゾーンにフォーマットする関数
+    function formatDateTimeLocal(date) {
+            var tzoffset = date.getTimezoneOffset() * 60000; // タイムゾーンオフセットをミリ秒に変換
+            var localISOTime = (new Date(date - tzoffset)).toISOString().slice(0, 16);
+            return localISOTime;
+    }
+    //時間だけを抽出する関数
+    function formatTime(date) {
+        if (!date) {
+            return "Invalid date"; // 適切なデフォルト値を返す
+        }
+        var hours = date.getHours().toString().padStart(2, '0');
+        var minutes = date.getMinutes().toString().padStart(2, '0');
+        return `${hours}:${minutes}`;
+    }
+
+</script>

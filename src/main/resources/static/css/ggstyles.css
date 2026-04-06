@@ -1,0 +1,73 @@
+#back-url {
+    color: #f5eeee; /* リンクの色を白に設定 */
+    text-decoration: none; /* 下線を消す */
+}
+
+body {
+    background-color: #000000; /* 背景色を黒に設定 */
+    color: #000000; /* テキスト色を白に設定 */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #000000; /* 見出しの色を白に設定 */
+}
+
+p {
+    color: #000000; /* 段落の色を白に設定 */
+}
+
+.fade-in-image {
+    opacity: 0;
+    animation: fadeIn 5s ease-in-out forwards;
+    width: 200px; /* 画像の幅を300pxに設定 */
+    height: auto; /* 画像の高さを自動調整 */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* モーダルウィンドウのスタイル */
+.modal {
+    display: none; /* デフォルトでは非表示 */
+    position: fixed; /* 固定位置 */
+    z-index: 1; /* 最前面に表示 */
+    left: 0;
+    top: 0;
+    width: 80%; /* 全幅 */
+    height: 80%; /* 全高 */
+    background-color: rgba(0, 0, 0, 0); /* 黒 */
+}
+
+.modal-content {
+    background-color: #000000;
+    margin: 15% auto; /* 上下中央に配置 */
+    padding: 20px;
+    border: 1px solid #000000;
+    width: 80%; /* 幅80% */
+    max-width: 200px; /* 最大幅600px */
+    text-align: center; /* 中央揃え */
+    color: #fff; /* テキスト色を黒に設定 */
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}

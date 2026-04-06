@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<br>
+    <h1>Maintenance Page</h1>
+    <p>Googleカレンダーのメールアドレスが変更された場合、以下の項目を入力してからUpdateボタンを押す</p>
+    Google Calendar ID: Googleカレンダーのメールアドレス
+    <input id="google-calendar-id" type="text" placeholder="Google Calendar ID"></br>
+    Google Calendar API Key: GoogleカレンダーのAPIキー
+    <input id="google-calendar-api-key" type="text" placeholder="Google Calendar API Key"></br>
+    <button id="update-button">Update</button></br>
+
+    <p>カレンダーが表示されない場合は以下のボタンで予約を全て削除する or ラズパイを再起動する</p>
+    <button id="all-delete-button" onclick="window.location.href='/reservation/all-delete'">All Delete</button></br>
+
+    </br><a href="/reservation">Return to home</a>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('/setting')
+                .then(response => response.text())
+                .then(data => {
+                    // ["と"]を除外し、カンマで分割
+                    const cleanedData = data.replace(/[\[\]"]/g, '').split(',');
+                    document.getElementById('google-calendar-id').value = cleanedData[0];
+                    document.getElementById('google-calendar-api-key').value = cleanedData[1];
+                })
+                .catch(error => console.error('Error fetching settings:', error));
+
+            document.getElementById('update-button').addEventListener('click', function() {
+                const calendarId = document.getElementById('google-calendar-id').value;
+                const apiKey = document.getElementById('google-calendar-api-key').value;
+                console.log('calendarId:', calendarId);
+
+                fetch(`/setting/edit?mail=${encodeURIComponent(calendarId)}&api=${encodeURIComponent(apiKey)}`, {
+                    method: 'GET',
+                })
+                .then(response => response.text())
+                .then(data => {
+                    alert(data);
+                })
+                .catch(error => console.error('Error saving settings:', error));
+            });
+        });
+    </script>
+
+</body>
+</html>

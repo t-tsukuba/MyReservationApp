@@ -1,0 +1,87 @@
+> Task :compileJava UP-TO-DATE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :resolveMainClassName UP-TO-DATE
+
+> Task :bootRun
+23:45:34,093 |-INFO in ch.qos.logback.classic.LoggerContext[default] - This is logback-classic version 1.5.7
+23:45:34,094 |-INFO in ch.qos.logback.classic.util.ContextInitializer@4e31276e - Here is a list of configurators discovered as a service, by rank: 
+23:45:34,094 |-INFO in ch.qos.logback.classic.util.ContextInitializer@4e31276e -   org.springframework.boot.logging.logback.RootLogLevelConfigurator
+23:45:34,094 |-INFO in ch.qos.logback.classic.util.ContextInitializer@4e31276e - They will be invoked in order until ExecutionStatus.DO_NOT_INVOKE_NEXT_IF_ANY is returned.
+23:45:34,094 |-INFO in ch.qos.logback.classic.util.ContextInitializer@4e31276e - Constructed configurator of type class org.springframework.boot.logging.logback.RootLogLevelConfigurator
+23:45:34,099 |-INFO in ch.qos.logback.classic.util.ContextInitializer@4e31276e - org.springframework.boot.logging.logback.RootLogLevelConfigurator.configure() call lasted 0 milliseconds. ExecutionStatus=INVOKE_NEXT_IF_ANY
+23:45:34,099 |-INFO in ch.qos.logback.classic.util.ContextInitializer@4e31276e - Trying to configure with ch.qos.logback.classic.joran.SerializedModelConfigurator
+23:45:34,100 |-INFO in ch.qos.logback.classic.util.ContextInitializer@4e31276e - Constructed configurator of type class ch.qos.logback.classic.joran.SerializedModelConfigurator
+23:45:34,101 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.scmo]
+23:45:34,101 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.scmo]
+23:45:34,101 |-INFO in ch.qos.logback.classic.util.ContextInitializer@4e31276e - ch.qos.logback.classic.joran.SerializedModelConfigurator.configure() call lasted 1 milliseconds. ExecutionStatus=INVOKE_NEXT_IF_ANY
+23:45:34,101 |-INFO in ch.qos.logback.classic.util.ContextInitializer@4e31276e - Trying to configure with ch.qos.logback.classic.util.DefaultJoranConfigurator
+23:45:34,101 |-INFO in ch.qos.logback.classic.util.ContextInitializer@4e31276e - Constructed configurator of type class ch.qos.logback.classic.util.DefaultJoranConfigurator
+23:45:34,101 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+23:45:34,101 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.xml]
+23:45:34,101 |-INFO in ch.qos.logback.classic.util.ContextInitializer@4e31276e - ch.qos.logback.classic.util.DefaultJoranConfigurator.configure() call lasted 0 milliseconds. ExecutionStatus=INVOKE_NEXT_IF_ANY
+23:45:34,101 |-INFO in ch.qos.logback.classic.util.ContextInitializer@4e31276e - Trying to configure with ch.qos.logback.classic.BasicConfigurator
+23:45:34,102 |-INFO in ch.qos.logback.classic.util.ContextInitializer@4e31276e - Constructed configurator of type class ch.qos.logback.classic.BasicConfigurator
+23:45:34,102 |-INFO in ch.qos.logback.classic.BasicConfigurator@1a72a540 - Setting up default configuration.
+23:45:34,108 |-INFO in ch.qos.logback.classic.util.ContextInitializer@4e31276e - ch.qos.logback.classic.BasicConfigurator.configure() call lasted 6 milliseconds. ExecutionStatus=NEUTRAL
+23:45:34,251 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [CONSOLE]
+23:45:34,251 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+23:45:34,252 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+23:45:34,257 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [FILE]
+23:45:34,257 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+23:45:34,259 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@668312960 - No compression will be used
+23:45:34,260 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@668312960 - Will use the pattern logs/myapp.%d{yyyy-MM-dd}.%i.log for the active file
+23:45:34,266 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@198d6542 - The date pattern is 'yyyy-MM-dd' from file name pattern 'logs/myapp.%d{yyyy-MM-dd}.%i.log'.
+23:45:34,266 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@198d6542 - Roll-over at midnight.
+23:45:34,268 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@198d6542 - Setting initial period to 2026-04-06T14:39:01.565Z
+23:45:34,268 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@198d6542 - SizeAndTimeBasedFNATP is deprecated. Use SizeAndTimeBasedRollingPolicy instead
+23:45:34,268 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@198d6542 - For more information see http://logback.qos.ch/manual/appenders.html#SizeAndTimeBasedRollingPolicy
+23:45:34,269 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+23:45:34,270 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE] - Active log file name: logs/myapp.log
+23:45:34,270 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE] - File property is set to [logs/myapp.log]
+23:45:34,271 |-INFO in ch.qos.logback.classic.model.processor.RootLoggerModelHandler - Setting level of ROOT logger to INFO
+23:45:34,271 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@5e403b4a - Propagating INFO level on Logger[ROOT] onto the JUL framework
+23:45:34,271 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [CONSOLE] to Logger[ROOT]
+23:45:34,271 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [FILE] to Logger[ROOT]
+23:45:34,271 |-INFO in ch.qos.logback.core.model.processor.DefaultProcessor@5117dd67 - End of configuration.
+23:45:34,271 |-INFO in org.springframework.boot.logging.logback.SpringBootJoranConfigurator@5be49b60 - Registering current configuration as safe fallback point
+
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.3)
+
+2026-04-06 23:45:34.297 [main] INFO  com.example.myapp.Main - Starting Main using Java 17.0.16 with PID 15691 (/Users/tsukubatatsuki/Desktop/MyReservationApp/build/classes/java/main started by tsukubatatsuki in /Users/tsukubatatsuki/Desktop/MyReservationApp)
+2026-04-06 23:45:34.298 [main] DEBUG com.example.myapp.Main - Running with Spring Boot v3.3.3, Spring v6.1.12
+2026-04-06 23:45:34.298 [main] INFO  com.example.myapp.Main - No active profile set, falling back to 1 default profile: "default"
+2026-04-06 23:45:34.562 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-04-06 23:45:34.565 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-04-06 23:45:34.567 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-06 23:45:34.567 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2026-04-06 23:45:34.584 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-06 23:45:34.585 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 272 ms
+2026-04-06 23:45:34.637 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 12 mappings in 'requestMappingHandlerMapping'
+2026-04-06 23:45:34.656 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2026-04-06 23:45:34.662 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-04-06 23:45:34.674 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-04-06 23:45:34.698 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-04-06 23:45:34.706 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-04-06 23:45:34.710 [main] INFO  com.example.myapp.Main - Started Main in 0.573 seconds (process running for 0.677)
+2026-04-06 23:45:39.611 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-06 23:45:39.611 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-04-06 23:45:39.611 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2026-04-06 23:45:39.611 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2026-04-06 23:45:39.611 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2026-04-06 23:45:39.612 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@6756fb5b
+2026-04-06 23:45:39.612 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@52c621a3
+2026-04-06 23:45:39.612 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2026-04-06 23:45:39.612 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-04-06 23:45:39.615 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/", parameters={}
+2026-04-06 23:45:39.618 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#reservationForm(Model)
+2026-04-06 23:45:39.646 [http-nio-8080-exec-2] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected '*/*' given [*/*]
+2026-04-06 23:45:39.737 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK

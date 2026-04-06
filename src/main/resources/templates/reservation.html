@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>実験装置予約カレンダー</title>
+  <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<div class="app" id="app">
+
+  <header class="app-header">
+    <div class="app-header-inner">
+      <h1 class="app-title">実験装置予約カレンダー</h1>
+      <div class="header-links">
+        <a class="ext-link" href="https://skrs.adm.kanazawa-u.ac.jp/facility/27/detail" target="_blank" rel="noopener">X-ray Reservation</a>
+        <a class="ext-link" href="http://chemeng.w3.kanazawa-u.ac.jp/Scripts/yoyaku/new_yoyaku.cgi" target="_blank" rel="noopener">Room Reservation</a>
+        <button class="btn-log" id="btn-log">ログ閲覧</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="legend" id="legend"></div>
+
+  <div class="calendar-controls">
+    <div class="ctrl-left">
+      <div class="search-wrap">
+        <input type="text" id="search-input" class="search-input" placeholder="予約者名を検索…" autocomplete="off">
+        <button class="search-clear" id="search-clear" style="display:none">×</button>
+      </div>
+    </div>
+    <div class="ctrl-right">
+      <button class="btn-bulk-delete" id="btn-bulk-delete" style="display:none">削除(0件)</button>
+      <div class="zoom-controls">
+        <button class="zoom-btn" id="zoom-out">−</button>
+        <input type="range" id="zoom-slider" min="25" max="200" value="100" step="5">
+        <input type="number" id="zoom-input" min="25" max="200" value="100" class="zoom-number">
+        <span class="zoom-pct">%</span>
+        <button class="zoom-btn" id="zoom-in">+</button>
+      </div>
+      <div class="view-toggle" id="view-toggle">
+        <button class="vt-btn active" data-view="month">month</button>
+        <button class="vt-btn" data-view="week">week</button>
+        <button class="vt-btn" data-view="list">list</button>
+      </div>
+      <button class="btn-add" id="add-btn">+ 予約追加</button>
+    </div>
+  </div>
+
+  <div class="calendar-wrap" id="calendar-wrap">
+    <div id="calendar-area"></div>
+  </div>
+
+</div>
+
+<!-- 予約モーダル -->
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal">
+    <div class="modal-header">
+      <h3 id="modal-title">予約追加</h3>
+      <button class="modal-close" id="modal-close">×</button>
+    </div>
+    <div class="modal-body">
+      <div class="form-row">
+        <label>装置</label>
+        <div class="eq-custom-select">
+          <div class="eq-cs-trigger" id="eq-cs-trigger">
+            <span class="eq-cs-dot" id="eq-dot"></span>
+            <span class="eq-cs-label" id="eq-cs-label"></span>
+            <span class="eq-cs-arrow">▾</span>
+          </div>
+          <div class="eq-cs-list" id="eq-cs-list"></div>
+        </div>
+        <select id="f-equipment" style="display:none"></select>
+      </div>
+      <div class="form-row">
+        <label>予約者</label>
+        <div class="user-input-wrap">
+          <input type="text" id="f-user" placeholder="氏名を入力" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+          <div class="user-suggest-box" id="user-suggest-box" style="display:none"></div>
+        </div>
+      </div>
+      <div class="form-row">
+        <label>日付</label>
+        <input type="date" id="f-date">
+      </div>
+      <div class="form-row">
+        <label>時刻 <span class="label-hint">（例: 9 / 9:30 / 930 / 1430）</span></label>
+        <div class="time-inputs">
+          <input type="text" id="f-start" class="time-text" placeholder="start" autocomplete="off">
+          <span class="time-sep">〜</span>
+          <input type="text" id="f-end" class="time-text" placeholder="end" autocomplete="off">
+        </div>
+      </div>
+      <div class="form-row">
+        <label>備考</label>
+        <textarea id="f-notes" rows="3" autocomplete="off"></textarea>
+      </div>
+      <div class="form-row">
+        <label>編集ロックPIN <span class="label-hint">（任意・4桁）</span></label>
+        <input type="password" id="f-pin" class="pin-input" placeholder="設定しない場合は空欄" maxlength="4" autocomplete="off" inputmode="numeric">
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn-delete" id="btn-delete">削除</button>
+      <div class="footer-right">
+        <button class="btn-cancel" id="btn-cancel">キャンセル</button>
+        <button class="btn-save" id="btn-save">保存</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 日別タイムラインモーダル -->
+<div class="modal-overlay" id="day-modal-overlay">
+  <div class="modal day-modal">
+    <div class="modal-header">
+      <h3 id="day-modal-title"></h3>
+      <div class="day-modal-actions">
+        <button class="btn-add-day" id="day-add-btn">+ 予約追加</button>
+        <button class="modal-close" id="day-modal-close">×</button>
+      </div>
+    </div>
+    <div class="day-timeline-wrap" id="day-timeline-wrap"></div>
+  </div>
+</div>
+
+<!-- ログドロワー -->
+<div class="log-overlay" id="log-overlay"></div>
+<div class="log-drawer" id="log-drawer">
+  <div class="log-drawer-header">
+    <h3>予約ログ</h3>
+    <button class="modal-close" id="log-close">x</button>
+  </div>
+  <div class="log-filters">
+    <div class="log-tabs" id="log-tabs">
+      <button class="log-tab active" data-action="all">すべて</button>
+      <button class="log-tab" data-action="create">新規</button>
+      <button class="log-tab" data-action="edit">編集</button>
+      <button class="log-tab" data-action="delete">削除</button>
+    </div>
+    <select class="log-eq-select" id="log-eq-filter">
+      <option value="">すべての装置</option>
+    </select>
+  </div>
+  <div class="log-body" id="log-body"></div>
+  <div class="log-footer">
+    <span class="log-count" id="log-count"></span>
+    <button class="btn-clear-log" id="btn-clear-log">ログをクリア</button>
+  </div>
+</div>
+
+<script th:src="@{/js/app.js}"></script>
+</body>
+</html>

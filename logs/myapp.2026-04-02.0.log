@@ -1,0 +1,16 @@
+2026-04-02 00:50:40.265 [main] INFO  com.example.myapp.Main - Starting Main v0.0.1-SNAPSHOT using Java 17.0.16 with PID 47136 (/Users/tsukubatatsuki/Desktop/MyReservationApp/build/libs/myapp-0.0.1-SNAPSHOT.jar started by tsukubatatsuki in /Users/tsukubatatsuki/Desktop/MyReservationApp)
+2026-04-02 00:50:40.267 [main] DEBUG com.example.myapp.Main - Running with Spring Boot v3.3.3, Spring v6.1.12
+2026-04-02 00:50:40.268 [main] INFO  com.example.myapp.Main - No active profile set, falling back to 1 default profile: "default"
+2026-04-02 00:50:40.656 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-04-02 00:50:40.660 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-04-02 00:50:40.662 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-02 00:50:40.662 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2026-04-02 00:50:40.679 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-02 00:50:40.680 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 386 ms
+2026-04-02 00:50:40.761 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 12 mappings in 'requestMappingHandlerMapping'
+2026-04-02 00:50:40.784 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2026-04-02 00:50:40.794 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-04-02 00:50:40.804 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-04-02 00:50:40.831 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-04-02 00:50:40.842 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-04-02 00:50:40.853 [main] INFO  com.example.myapp.Main - Started Main in 0.815 seconds (process running for 1.031)

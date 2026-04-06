@@ -1,0 +1,968 @@
+2024-12-09 12:46:39.341 [main] INFO  com.example.myapp.Main - Starting Main using Java 21.0.2 with PID 69473 (/Users/yusuke/Desktop/Java/MyReservationApp/build/classes/java/main started by yusuke in /Users/yusuke/Desktop/Java/MyReservationApp)
+2024-12-09 12:46:39.344 [main] DEBUG com.example.myapp.Main - Running with Spring Boot v3.3.3, Spring v6.1.12
+2024-12-09 12:46:39.344 [main] INFO  com.example.myapp.Main - No active profile set, falling back to 1 default profile: "default"
+2024-12-09 12:46:39.695 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-12-09 12:46:39.700 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-12-09 12:46:39.702 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-12-09 12:46:39.702 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-12-09 12:46:39.734 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-12-09 12:46:39.735 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 372 ms
+2024-12-09 12:46:39.805 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 17 mappings in 'requestMappingHandlerMapping'
+2024-12-09 12:46:39.896 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-12-09 12:46:39.911 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-12-09 12:46:39.952 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-12-09 12:46:39.989 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-12-09 12:46:40.029 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-12-09 12:46:40.035 [main] INFO  com.example.myapp.Main - Started Main in 1.016 seconds (process running for 1.228)
+2024-12-09 12:46:55.766 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-09 12:46:55.767 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-12-09 12:46:55.767 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2024-12-09 12:46:55.767 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2024-12-09 12:46:55.767 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2024-12-09 12:46:55.767 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@2352d9b
+2024-12-09 12:46:55.768 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@4f1d870c
+2024-12-09 12:46:55.768 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-12-09 12:46:55.768 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-12-09 12:46:55.772 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservation", parameters={}
+2024-12-09 12:46:55.778 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#reservationForm(Model)
+2024-12-09 12:46:55.803 [http-nio-8080-exec-1] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-12-09 12:46:55.891 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 12:46:55.900 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/css/styles.css", parameters={}
+2024-12-09 12:46:55.902 [http-nio-8080-exec-2] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-12-09 12:46:55.906 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 12:46:55.969 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservationslog", parameters={}
+2024-12-09 12:46:55.969 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservationsLog()
+2024-12-09 12:46:55.973 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 12:46:55.974 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[その他 11/25 B4_hayashi reserved 11/19 15:25:03, DMA 11/26 taniguchi reserved 11/19 15:26:20, DSC 11/2 (truncated)...]
+2024-12-09 12:46:55.980 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 12:46:56.039 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservations", parameters={}
+2024-12-09 12:46:56.039 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservations()
+2024-12-09 12:46:56.042 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 12:46:56.043 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[name=松本研&startDate=2024/11/19/10:00&endDate=2024/11/19/18:00&equipmentType=DSC&id=-2081583873&detai (truncated)...]
+2024-12-09 12:46:56.060 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 12:46:56.077 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/favicon.ico", parameters={}
+2024-12-09 12:46:56.078 [http-nio-8080-exec-5] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-12-09 12:46:56.079 [http-nio-8080-exec-5] DEBUG o.s.w.s.r.ResourceHttpRequestHandler - Resource not found
+2024-12-09 12:46:56.081 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2024-12-09 12:46:56.081 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+2024-12-09 12:46:56.083 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error", parameters={}
+2024-12-09 12:46:56.084 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2024-12-09 12:46:56.087 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json;q=0.8', given [image/avif, image/webp, image/apng, image/svg+xml, image/*, */*;q=0.8] and supported [application/json, application/*+json]
+2024-12-09 12:46:56.087 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{timestamp=Mon Dec 09 12:46:56 JST 2024, status=404, error=Not Found, path=/favicon.ico}]
+2024-12-09 12:46:56.096 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 404
+2024-12-09 12:47:06.443 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservations", parameters={}
+2024-12-09 12:47:06.445 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservations()
+2024-12-09 12:47:06.449 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 12:47:06.453 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[name=松本研&startDate=2024/11/19/10:00&endDate=2024/11/19/18:00&equipmentType=DSC&id=-2081583873&detai (truncated)...]
+2024-12-09 12:47:06.456 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 12:47:07.258 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservations", parameters={}
+2024-12-09 12:47:07.260 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservations()
+2024-12-09 12:47:07.266 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 12:47:07.269 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[name=松本研&startDate=2024/11/19/10:00&endDate=2024/11/19/18:00&equipmentType=DSC&id=-2081583873&detai (truncated)...]
+2024-12-09 12:47:07.272 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 13:01:09.368 [main] INFO  com.example.myapp.Main - Starting Main using Java 21.0.2 with PID 70003 (/Users/yusuke/Desktop/Java/MyReservationApp/build/classes/java/main started by yusuke in /Users/yusuke/Desktop/Java/MyReservationApp)
+2024-12-09 13:01:09.369 [main] DEBUG com.example.myapp.Main - Running with Spring Boot v3.3.3, Spring v6.1.12
+2024-12-09 13:01:09.370 [main] INFO  com.example.myapp.Main - No active profile set, falling back to 1 default profile: "default"
+2024-12-09 13:01:09.725 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-12-09 13:01:09.729 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-12-09 13:01:09.732 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-12-09 13:01:09.732 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-12-09 13:01:09.755 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-12-09 13:01:09.756 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 369 ms
+2024-12-09 13:01:09.830 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 17 mappings in 'requestMappingHandlerMapping'
+2024-12-09 13:01:09.917 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-12-09 13:01:09.944 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-12-09 13:01:09.960 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-12-09 13:01:09.993 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-12-09 13:01:10.008 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-12-09 13:01:10.013 [main] INFO  com.example.myapp.Main - Started Main in 0.922 seconds (process running for 1.133)
+2024-12-09 13:01:10.910 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-09 13:01:10.910 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-12-09 13:01:10.910 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2024-12-09 13:01:10.910 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2024-12-09 13:01:10.910 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2024-12-09 13:01:10.911 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@1ef7fb47
+2024-12-09 13:01:10.911 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@4aec88ba
+2024-12-09 13:01:10.911 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-12-09 13:01:10.911 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-12-09 13:01:10.915 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservation", parameters={}
+2024-12-09 13:01:10.920 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#reservationForm(Model)
+2024-12-09 13:01:10.940 [http-nio-8080-exec-1] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-12-09 13:01:11.014 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 13:01:11.033 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/css/styles.css", parameters={}
+2024-12-09 13:01:11.035 [http-nio-8080-exec-2] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-12-09 13:01:11.039 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 13:01:11.085 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservationslog", parameters={}
+2024-12-09 13:01:11.085 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservationsLog()
+2024-12-09 13:01:11.092 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 13:01:11.094 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[その他 11/25 B4_hayashi reserved 11/19 15:25:03, DMA 11/26 taniguchi reserved 11/19 15:26:20, DSC 11/2 (truncated)...]
+2024-12-09 13:01:11.102 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 13:01:11.111 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservations", parameters={}
+2024-12-09 13:01:11.113 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservations()
+2024-12-09 13:01:11.115 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 13:01:11.116 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[name=松本研&startDate=2024/11/19/10:00&endDate=2024/11/19/18:00&equipmentType=DSC&id=-2081583873&detai (truncated)...]
+2024-12-09 13:01:11.136 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 13:01:20.509 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - POST "/reservation", parameters={masked}
+2024-12-09 13:01:20.509 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservation/ggggggggggggg", parameters={}
+2024-12-09 13:01:20.511 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#reservationSubmit(ReservationElement)
+2024-12-09 13:01:20.511 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#ggggggggggggg()
+2024-12-09 13:01:20.514 [http-nio-8080-exec-7] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-12-09 13:01:20.521 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 13:01:20.534 [http-nio-8080-exec-8] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected '*/*' given [*/*]
+2024-12-09 13:01:20.541 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - GET "/css/ggstyles.css", parameters={}
+2024-12-09 13:01:20.541 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - GET "/images/hase.jpg", parameters={}
+2024-12-09 13:01:20.542 [http-nio-8080-exec-9] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-12-09 13:01:20.543 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 13:01:20.544 [http-nio-8080-exec-10] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-12-09 13:01:20.544 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 13:01:20.545 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 13:01:22.844 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservation", parameters={}
+2024-12-09 13:01:22.845 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#reservationForm(Model)
+2024-12-09 13:01:22.851 [http-nio-8080-exec-4] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-12-09 13:01:22.860 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 13:01:22.868 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - GET "/css/styles.css", parameters={}
+2024-12-09 13:01:22.869 [http-nio-8080-exec-6] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-12-09 13:01:22.871 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 304 NOT_MODIFIED
+2024-12-09 13:01:22.913 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservationslog", parameters={}
+2024-12-09 13:01:22.914 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservationsLog()
+2024-12-09 13:01:22.914 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 13:01:22.915 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[DMA 11/26 taniguchi reserved 11/19 15:26:20, DSC 11/26 B4_hayashi reserved 11/19 15:26:50, DSC 11/2 (truncated)...]
+2024-12-09 13:01:22.915 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 13:01:22.942 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservations", parameters={}
+2024-12-09 13:01:22.942 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservations()
+2024-12-09 13:01:22.943 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 13:01:22.944 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[name=松本研&startDate=2024/11/19/10:00&endDate=2024/11/19/18:00&equipmentType=DSC&id=-2081583873&detai (truncated)...]
+2024-12-09 13:01:22.945 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 13:01:52.404 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservation/ggggggggggggg", parameters={}
+2024-12-09 13:01:52.405 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#ggggggggggggg()
+2024-12-09 13:01:52.407 [http-nio-8080-exec-10] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-12-09 13:01:52.409 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 13:01:53.325 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/images/hase.jpg", parameters={}
+2024-12-09 13:01:53.325 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/css/ggstyles.css", parameters={}
+2024-12-09 13:01:53.327 [http-nio-8080-exec-3] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-12-09 13:01:53.327 [http-nio-8080-exec-2] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-12-09 13:01:53.329 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 304 NOT_MODIFIED
+2024-12-09 13:01:53.330 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 304 NOT_MODIFIED
+2024-12-09 13:01:54.724 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservation", parameters={}
+2024-12-09 13:01:54.725 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#reservationForm(Model)
+2024-12-09 13:01:54.732 [http-nio-8080-exec-1] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-12-09 13:01:54.738 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 13:01:54.751 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/css/styles.css", parameters={}
+2024-12-09 13:01:54.751 [http-nio-8080-exec-4] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-12-09 13:01:54.752 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 304 NOT_MODIFIED
+2024-12-09 13:01:54.798 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservationslog", parameters={}
+2024-12-09 13:01:54.799 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservationsLog()
+2024-12-09 13:01:54.799 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 13:01:54.799 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[DMA 11/26 taniguchi reserved 11/19 15:26:20, DSC 11/26 B4_hayashi reserved 11/19 15:26:50, DSC 11/2 (truncated)...]
+2024-12-09 13:01:54.800 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 13:01:54.830 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservations", parameters={}
+2024-12-09 13:01:54.831 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservations()
+2024-12-09 13:01:54.832 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 13:01:54.833 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[name=松本研&startDate=2024/11/19/10:00&endDate=2024/11/19/18:00&equipmentType=DSC&id=-2081583873&detai (truncated)...]
+2024-12-09 13:01:54.834 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 13:02:01.133 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservation", parameters={}
+2024-12-09 13:02:01.134 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#reservationForm(Model)
+2024-12-09 13:02:01.140 [http-nio-8080-exec-8] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-12-09 13:02:01.152 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 13:02:01.163 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - GET "/css/styles.css", parameters={}
+2024-12-09 13:02:01.164 [http-nio-8080-exec-10] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-12-09 13:02:01.167 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Completed 304 NOT_MODIFIED
+2024-12-09 13:02:01.208 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservationslog", parameters={}
+2024-12-09 13:02:01.208 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservationsLog()
+2024-12-09 13:02:01.209 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 13:02:01.209 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[DMA 11/26 taniguchi reserved 11/19 15:26:20, DSC 11/26 B4_hayashi reserved 11/19 15:26:50, DSC 11/2 (truncated)...]
+2024-12-09 13:02:01.210 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 13:02:01.238 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservations", parameters={}
+2024-12-09 13:02:01.238 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservations()
+2024-12-09 13:02:01.239 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 13:02:01.240 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[name=松本研&startDate=2024/11/19/10:00&endDate=2024/11/19/18:00&equipmentType=DSC&id=-2081583873&detai (truncated)...]
+2024-12-09 13:02:01.242 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 13:03:59.545 [main] INFO  com.example.myapp.Main - Starting Main using Java 21.0.2 with PID 70198 (/Users/yusuke/Desktop/Java/MyReservationApp/build/classes/java/main started by yusuke in /Users/yusuke/Desktop/Java/MyReservationApp)
+2024-12-09 13:03:59.546 [main] DEBUG com.example.myapp.Main - Running with Spring Boot v3.3.3, Spring v6.1.12
+2024-12-09 13:03:59.546 [main] INFO  com.example.myapp.Main - No active profile set, falling back to 1 default profile: "default"
+2024-12-09 13:03:59.909 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-12-09 13:03:59.913 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-12-09 13:03:59.915 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-12-09 13:03:59.915 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-12-09 13:03:59.937 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-12-09 13:03:59.938 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 361 ms
+2024-12-09 13:04:00.015 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 17 mappings in 'requestMappingHandlerMapping'
+2024-12-09 13:04:00.045 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-12-09 13:04:00.055 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-12-09 13:04:00.066 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-12-09 13:04:00.092 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-12-09 13:04:00.103 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-12-09 13:04:00.107 [main] INFO  com.example.myapp.Main - Started Main in 0.889 seconds (process running for 1.059)
+2024-12-09 13:04:00.445 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-09 13:04:00.446 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-12-09 13:04:00.446 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2024-12-09 13:04:00.446 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2024-12-09 13:04:00.446 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2024-12-09 13:04:00.446 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@6b43a98e
+2024-12-09 13:04:00.447 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@116141e0
+2024-12-09 13:04:00.447 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-12-09 13:04:00.447 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-12-09 13:04:00.450 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservation", parameters={}
+2024-12-09 13:04:00.455 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#reservationForm(Model)
+2024-12-09 13:04:00.472 [http-nio-8080-exec-1] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-12-09 13:04:00.551 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 13:04:00.567 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/css/styles.css", parameters={}
+2024-12-09 13:04:00.569 [http-nio-8080-exec-2] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-12-09 13:04:00.573 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 13:04:00.617 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservationslog", parameters={}
+2024-12-09 13:04:00.617 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservationsLog()
+2024-12-09 13:04:00.624 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 13:04:00.625 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[DMA 11/26 taniguchi reserved 11/19 15:26:20, DSC 11/26 B4_hayashi reserved 11/19 15:26:50, DSC 11/2 (truncated)...]
+2024-12-09 13:04:00.632 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 13:04:00.641 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservations", parameters={}
+2024-12-09 13:04:00.642 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservations()
+2024-12-09 13:04:00.645 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 13:04:00.646 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[name=松本研&startDate=2024/11/19/10:00&endDate=2024/11/19/18:00&equipmentType=DSC&id=-2081583873&detai (truncated)...]
+2024-12-09 13:04:00.664 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 13:04:07.288 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservation/ggggggggggggg", parameters={}
+2024-12-09 13:04:07.289 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#ggggggggggggg()
+2024-12-09 13:04:07.291 [http-nio-8080-exec-7] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-12-09 13:04:07.301 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 13:04:08.331 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - GET "/images/hase.jpg", parameters={}
+2024-12-09 13:04:08.331 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - GET "/css/ggstyles.css", parameters={}
+2024-12-09 13:04:08.332 [http-nio-8080-exec-9] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-12-09 13:04:08.332 [http-nio-8080-exec-8] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-12-09 13:04:08.334 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 13:04:08.334 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 13:04:11.440 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservation", parameters={}
+2024-12-09 13:04:11.441 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#reservationForm(Model)
+2024-12-09 13:04:11.447 [http-nio-8080-exec-2] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-12-09 13:04:11.463 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 13:04:11.464 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/css/styles.css", parameters={}
+2024-12-09 13:04:11.465 [http-nio-8080-exec-3] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-12-09 13:04:11.467 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 304 NOT_MODIFIED
+2024-12-09 13:04:11.506 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservationslog", parameters={}
+2024-12-09 13:04:11.507 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservationsLog()
+2024-12-09 13:04:11.507 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 13:04:11.508 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[DMA 11/26 taniguchi reserved 11/19 15:26:20, DSC 11/26 B4_hayashi reserved 11/19 15:26:50, DSC 11/2 (truncated)...]
+2024-12-09 13:04:11.509 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 13:04:11.529 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservations", parameters={}
+2024-12-09 13:04:11.529 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservations()
+2024-12-09 13:04:11.531 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 13:04:11.532 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[name=松本研&startDate=2024/11/19/10:00&endDate=2024/11/19/18:00&equipmentType=DSC&id=-2081583873&detai (truncated)...]
+2024-12-09 13:04:11.533 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 13:04:14.934 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservations", parameters={}
+2024-12-09 13:04:14.935 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservations()
+2024-12-09 13:04:14.938 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/json, application/*+json]
+2024-12-09 13:04:14.945 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[name=松本研&startDate=2024/11/19/10:00&endDate=2024/11/19/18:00&equipmentType=DSC&id=-2081583873&detai (truncated)...]
+2024-12-09 13:04:14.949 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 13:14:18.590 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservation", parameters={}
+2024-12-09 13:14:18.592 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#reservationForm(Model)
+2024-12-09 13:14:18.598 [http-nio-8080-exec-8] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-12-09 13:14:18.602 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 13:14:18.620 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/css/styles.css", parameters={}
+2024-12-09 13:14:18.621 [http-nio-8080-exec-1] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-12-09 13:14:18.622 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 304 NOT_MODIFIED
+2024-12-09 13:14:18.694 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservationslog", parameters={}
+2024-12-09 13:14:18.694 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservationsLog()
+2024-12-09 13:14:18.698 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 13:14:18.699 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[DMA 11/26 taniguchi reserved 11/19 15:26:20, DSC 11/26 B4_hayashi reserved 11/19 15:26:50, DSC 11/2 (truncated)...]
+2024-12-09 13:14:18.703 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 13:14:18.734 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservations", parameters={}
+2024-12-09 13:14:18.734 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservations()
+2024-12-09 13:14:18.735 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 13:14:18.736 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[name=松本研&startDate=2024/11/19/10:00&endDate=2024/11/19/18:00&equipmentType=DSC&id=-2081583873&detai (truncated)...]
+2024-12-09 13:14:18.750 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 13:14:33.801 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - POST "/reservation", parameters={masked}
+2024-12-09 13:14:33.801 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservation/ggggggggggggg", parameters={}
+2024-12-09 13:14:33.802 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#reservationSubmit(ReservationElement)
+2024-12-09 13:14:33.802 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#ggggggggggggg()
+2024-12-09 13:14:33.804 [http-nio-8080-exec-5] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-12-09 13:14:33.805 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 13:14:33.818 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/images/hase.jpg", parameters={}
+2024-12-09 13:14:33.819 [http-nio-8080-exec-7] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-12-09 13:14:33.820 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 304 NOT_MODIFIED
+2024-12-09 13:14:33.821 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - GET "/css/ggstyles.css", parameters={}
+2024-12-09 13:14:33.823 [http-nio-8080-exec-9] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-12-09 13:14:33.824 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 304 NOT_MODIFIED
+2024-12-09 13:14:33.830 [http-nio-8080-exec-6] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected '*/*' given [*/*]
+2024-12-09 13:14:33.832 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 13:14:36.602 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservation", parameters={}
+2024-12-09 13:14:36.603 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#reservationForm(Model)
+2024-12-09 13:14:36.610 [http-nio-8080-exec-2] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-12-09 13:14:36.619 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 13:14:36.680 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservationslog", parameters={}
+2024-12-09 13:14:36.680 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservationsLog()
+2024-12-09 13:14:36.681 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 13:14:36.681 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[DSC 11/26 B4_hayashi reserved 11/19 15:26:50, DSC 11/26 B4_hayashi edited 11/19 15:27:17, プレス 11/20 (truncated)...]
+2024-12-09 13:14:36.682 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 13:14:36.711 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservations", parameters={}
+2024-12-09 13:14:36.711 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservations()
+2024-12-09 13:14:36.713 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 13:14:36.713 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[name=松本研&startDate=2024/11/19/10:00&endDate=2024/11/19/18:00&equipmentType=DSC&id=-2081583873&detai (truncated)...]
+2024-12-09 13:14:36.714 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 13:43:56.115 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservation", parameters={}
+2024-12-09 13:43:56.117 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#reservationForm(Model)
+2024-12-09 13:43:56.127 [http-nio-8080-exec-9] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-12-09 13:43:56.133 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 13:43:56.155 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - GET "/css/styles.css", parameters={}
+2024-12-09 13:43:56.157 [http-nio-8080-exec-6] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-12-09 13:43:56.159 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 304 NOT_MODIFIED
+2024-12-09 13:43:56.204 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservationslog", parameters={}
+2024-12-09 13:43:56.204 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservationsLog()
+2024-12-09 13:43:56.205 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 13:43:56.205 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[DSC 11/26 B4_hayashi reserved 11/19 15:26:50, DSC 11/26 B4_hayashi edited 11/19 15:27:17, プレス 11/20 (truncated)...]
+2024-12-09 13:43:56.206 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 13:43:56.238 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservations", parameters={}
+2024-12-09 13:43:56.239 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservations()
+2024-12-09 13:43:56.240 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 13:43:56.240 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[name=松本研&startDate=2024/11/19/10:00&endDate=2024/11/19/18:00&equipmentType=DSC&id=-2081583873&detai (truncated)...]
+2024-12-09 13:43:56.241 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 13:45:22.659 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservation/ggggggggggggg", parameters={}
+2024-12-09 13:45:22.659 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - POST "/reservation", parameters={masked}
+2024-12-09 13:45:22.660 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#reservationSubmit(ReservationElement)
+2024-12-09 13:45:22.660 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#ggggggggggggg()
+2024-12-09 13:45:22.661 [http-nio-8080-exec-3] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-12-09 13:45:22.663 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 13:45:22.665 [http-nio-8080-exec-4] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected '*/*' given [*/*]
+2024-12-09 13:45:22.668 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 13:45:22.674 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/css/ggstyles.css", parameters={}
+2024-12-09 13:45:22.674 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/images/hase.jpg", parameters={}
+2024-12-09 13:45:22.674 [http-nio-8080-exec-5] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-12-09 13:45:22.674 [http-nio-8080-exec-7] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-12-09 13:45:22.675 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 304 NOT_MODIFIED
+2024-12-09 13:45:22.675 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 304 NOT_MODIFIED
+2024-12-09 13:46:52.381 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservation", parameters={}
+2024-12-09 13:46:52.382 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#reservationForm(Model)
+2024-12-09 13:46:52.388 [http-nio-8080-exec-1] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-12-09 13:46:52.391 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 13:46:52.453 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservationslog", parameters={}
+2024-12-09 13:46:52.454 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservationsLog()
+2024-12-09 13:46:52.454 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 13:46:52.454 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[DSC 11/26 B4_hayashi edited 11/19 15:27:17, プレス 11/20 B4_hayashi edited 11/19 15:27:35, プレス 11/21 B (truncated)...]
+2024-12-09 13:46:52.455 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 13:46:52.482 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservations", parameters={}
+2024-12-09 13:46:52.483 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservations()
+2024-12-09 13:46:52.485 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 13:46:52.486 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[name=松本研&startDate=2024/11/19/10:00&endDate=2024/11/19/18:00&equipmentType=DSC&id=-2081583873&detai (truncated)...]
+2024-12-09 13:46:52.488 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 13:47:39.438 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservation/ggggggggggggg", parameters={}
+2024-12-09 13:47:39.439 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#ggggggggggggg()
+2024-12-09 13:47:39.439 [http-nio-8080-exec-4] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-12-09 13:47:39.441 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 13:47:42.506 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservation", parameters={}
+2024-12-09 13:47:42.506 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#reservationForm(Model)
+2024-12-09 13:47:42.510 [http-nio-8080-exec-9] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-12-09 13:47:42.514 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 13:47:42.578 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservationslog", parameters={}
+2024-12-09 13:47:42.579 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservationsLog()
+2024-12-09 13:47:42.579 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 13:47:42.579 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[DSC 11/26 B4_hayashi edited 11/19 15:27:17, プレス 11/20 B4_hayashi edited 11/19 15:27:35, プレス 11/21 B (truncated)...]
+2024-12-09 13:47:42.580 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 13:47:42.607 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservations", parameters={}
+2024-12-09 13:47:42.607 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservations()
+2024-12-09 13:47:42.608 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 13:47:42.609 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[name=松本研&startDate=2024/11/19/10:00&endDate=2024/11/19/18:00&equipmentType=DSC&id=-2081583873&detai (truncated)...]
+2024-12-09 13:47:42.610 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 13:49:56.431 [main] INFO  com.example.myapp.Main - Starting Main using Java 21.0.2 with PID 71479 (/Users/yusuke/Desktop/Java/MyReservationApp/build/classes/java/main started by yusuke in /Users/yusuke/Desktop/Java/MyReservationApp)
+2024-12-09 13:49:56.432 [main] DEBUG com.example.myapp.Main - Running with Spring Boot v3.3.3, Spring v6.1.12
+2024-12-09 13:49:56.432 [main] INFO  com.example.myapp.Main - No active profile set, falling back to 1 default profile: "default"
+2024-12-09 13:49:56.786 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-12-09 13:49:56.791 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-12-09 13:49:56.793 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-12-09 13:49:56.794 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-12-09 13:49:56.818 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-12-09 13:49:56.819 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 369 ms
+2024-12-09 13:49:56.889 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 17 mappings in 'requestMappingHandlerMapping'
+2024-12-09 13:49:56.916 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-12-09 13:49:56.928 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-12-09 13:49:56.940 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-12-09 13:49:56.969 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-12-09 13:49:56.980 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-12-09 13:49:56.984 [main] INFO  com.example.myapp.Main - Started Main in 0.806 seconds (process running for 1.076)
+2024-12-09 13:49:57.406 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-09 13:49:57.406 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-12-09 13:49:57.406 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2024-12-09 13:49:57.406 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2024-12-09 13:49:57.406 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2024-12-09 13:49:57.407 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@1619d7b
+2024-12-09 13:49:57.407 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@57ab4408
+2024-12-09 13:49:57.408 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-12-09 13:49:57.408 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2024-12-09 13:49:57.410 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservation", parameters={}
+2024-12-09 13:49:57.416 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#reservationForm(Model)
+2024-12-09 13:49:57.438 [http-nio-8080-exec-1] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-12-09 13:49:57.520 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 13:49:57.530 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/css/styles.css", parameters={}
+2024-12-09 13:49:57.532 [http-nio-8080-exec-2] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-12-09 13:49:57.537 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 13:49:57.580 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservationslog", parameters={}
+2024-12-09 13:49:57.580 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservationsLog()
+2024-12-09 13:49:57.585 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 13:49:57.586 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[DSC 11/26 B4_hayashi edited 11/19 15:27:17, プレス 11/20 B4_hayashi edited 11/19 15:27:35, プレス 11/21 B (truncated)...]
+2024-12-09 13:49:57.592 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 13:49:57.635 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservations", parameters={}
+2024-12-09 13:49:57.636 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservations()
+2024-12-09 13:49:57.638 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 13:49:57.639 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[name=松本研&startDate=2024/11/19/10:00&endDate=2024/11/19/18:00&equipmentType=DSC&id=-2081583873&detai (truncated)...]
+2024-12-09 13:49:57.661 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 13:50:01.369 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservation/edit?id=-323623499&name=hasegawa&startDate=2024-12-09%2010%3A00&endDate=2024-12-09%2018%3A00&equipmentType=INSTRON&details=", parameters={masked}
+2024-12-09 13:50:01.370 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#reservationEdit(String, String, String, String, String, String)
+2024-12-09 13:50:01.385 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-12-09 13:50:01.386 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing ["edit-success"]
+2024-12-09 13:50:01.387 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 13:50:01.390 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservations", parameters={}
+2024-12-09 13:50:01.391 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservations()
+2024-12-09 13:50:01.393 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 13:50:01.394 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[name=松本研&startDate=2024/11/19/10:00&endDate=2024/11/19/18:00&equipmentType=DSC&id=-2081583873&detai (truncated)...]
+2024-12-09 13:50:01.396 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 13:50:02.287 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservation/ggggggggggggg", parameters={}
+2024-12-09 13:50:02.287 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#ggggggggggggg()
+2024-12-09 13:50:02.290 [http-nio-8080-exec-9] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-12-09 13:50:02.300 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 13:50:03.117 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservation", parameters={}
+2024-12-09 13:50:03.118 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#reservationForm(Model)
+2024-12-09 13:50:03.126 [http-nio-8080-exec-10] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-12-09 13:50:03.132 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 13:50:03.149 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/css/ggstyles.css", parameters={}
+2024-12-09 13:50:03.153 [http-nio-8080-exec-1] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-12-09 13:50:03.153 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/css/styles.css", parameters={}
+2024-12-09 13:50:03.154 [http-nio-8080-exec-2] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-12-09 13:50:03.154 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 13:50:03.155 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 304 NOT_MODIFIED
+2024-12-09 13:50:03.195 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservationslog", parameters={}
+2024-12-09 13:50:03.195 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservationsLog()
+2024-12-09 13:50:03.196 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 13:50:03.196 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[プレス 11/20 B4_hayashi edited 11/19 15:27:35, プレス 11/21 B4_hayashi deleted 11/19 15:27:37, DMA 11/20  (truncated)...]
+2024-12-09 13:50:03.196 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 13:50:03.219 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservations", parameters={}
+2024-12-09 13:50:03.220 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservations()
+2024-12-09 13:50:03.221 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 13:50:03.222 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[name=松本研&startDate=2024/11/19/10:00&endDate=2024/11/19/18:00&equipmentType=DSC&id=-2081583873&detai (truncated)...]
+2024-12-09 13:50:03.223 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 14:49:21.994 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservation", parameters={}
+2024-12-09 14:49:21.998 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#reservationForm(Model)
+2024-12-09 14:49:22.007 [http-nio-8080-exec-5] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-12-09 14:49:22.013 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 14:49:22.029 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/css/styles.css", parameters={}
+2024-12-09 14:49:22.030 [http-nio-8080-exec-7] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-12-09 14:49:22.030 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 304 NOT_MODIFIED
+2024-12-09 14:49:22.077 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservationslog", parameters={}
+2024-12-09 14:49:22.078 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservationsLog()
+2024-12-09 14:49:22.079 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 14:49:22.079 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[プレス 11/20 B4_hayashi edited 11/19 15:27:35, プレス 11/21 B4_hayashi deleted 11/19 15:27:37, DMA 11/20  (truncated)...]
+2024-12-09 14:49:22.080 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 14:49:22.107 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservations", parameters={}
+2024-12-09 14:49:22.107 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservations()
+2024-12-09 14:49:22.109 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 14:49:22.110 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[name=松本研&startDate=2024/11/19/10:00&endDate=2024/11/19/18:00&equipmentType=DSC&id=-2081583873&detai (truncated)...]
+2024-12-09 14:49:22.113 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 14:50:13.822 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - POST "/reservation", parameters={masked}
+2024-12-09 14:50:13.823 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#reservationSubmit(ReservationElement)
+2024-12-09 14:50:13.847 [http-nio-8080-exec-2] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected '*/*' given [*/*]
+2024-12-09 14:50:13.849 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 14:50:13.854 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservations", parameters={}
+2024-12-09 14:50:13.854 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservations()
+2024-12-09 14:50:13.856 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 14:50:13.857 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[name=松本研&startDate=2024/11/19/10:00&endDate=2024/11/19/18:00&equipmentType=DSC&id=-2081583873&detai (truncated)...]
+2024-12-09 14:50:13.859 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 14:50:14.393 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservation", parameters={}
+2024-12-09 14:50:14.393 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#reservationForm(Model)
+2024-12-09 14:50:14.396 [http-nio-8080-exec-4] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-12-09 14:50:14.400 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 14:50:14.469 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservationslog", parameters={}
+2024-12-09 14:50:14.470 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservationsLog()
+2024-12-09 14:50:14.470 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 14:50:14.470 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[プレス 11/21 B4_hayashi deleted 11/19 15:27:37, DMA 11/20 B4_hayashi edited 11/19 15:27:59, DMA 11/21  (truncated)...]
+2024-12-09 14:50:14.471 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 14:50:14.496 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservations", parameters={}
+2024-12-09 14:50:14.497 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservations()
+2024-12-09 14:50:14.499 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 14:50:14.499 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[name=松本研&startDate=2024/11/19/10:00&endDate=2024/11/19/18:00&equipmentType=DSC&id=-2081583873&detai (truncated)...]
+2024-12-09 14:50:14.501 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 14:50:47.846 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - POST "/reservation", parameters={masked}
+2024-12-09 14:50:47.848 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#reservationSubmit(ReservationElement)
+2024-12-09 14:50:47.854 [http-nio-8080-exec-9] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected '*/*' given [*/*]
+2024-12-09 14:50:47.859 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 14:50:47.862 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservations", parameters={}
+2024-12-09 14:50:47.863 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservations()
+2024-12-09 14:50:47.864 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 14:50:47.866 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[name=松本研&startDate=2024/11/19/10:00&endDate=2024/11/19/18:00&equipmentType=DSC&id=-2081583873&detai (truncated)...]
+2024-12-09 14:50:47.867 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 14:50:48.694 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservation", parameters={}
+2024-12-09 14:50:48.696 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#reservationForm(Model)
+2024-12-09 14:50:48.700 [http-nio-8080-exec-1] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-12-09 14:50:48.705 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 14:50:48.774 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservationslog", parameters={}
+2024-12-09 14:50:48.775 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservationsLog()
+2024-12-09 14:50:48.776 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 14:50:48.776 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[DMA 11/20 B4_hayashi edited 11/19 15:27:59, DMA 11/21 B4_hayashi deleted 11/19 15:28:02, DMA 11/27  (truncated)...]
+2024-12-09 14:50:48.777 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 14:50:48.803 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservations", parameters={}
+2024-12-09 14:50:48.804 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservations()
+2024-12-09 14:50:48.805 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 14:50:48.807 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[name=松本研&startDate=2024/11/19/10:00&endDate=2024/11/19/18:00&equipmentType=DSC&id=-2081583873&detai (truncated)...]
+2024-12-09 14:50:48.808 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 14:50:52.357 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservation/remove/1366874723", parameters={}
+2024-12-09 14:50:52.358 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#reservationRemove(String)
+2024-12-09 14:50:52.366 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-12-09 14:50:52.366 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing ["delete-success"]
+2024-12-09 14:50:52.367 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 14:50:52.371 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservations", parameters={}
+2024-12-09 14:50:52.372 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservations()
+2024-12-09 14:50:52.374 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 14:50:52.375 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[name=松本研&startDate=2024/11/19/10:00&endDate=2024/11/19/18:00&equipmentType=DSC&id=-2081583873&detai (truncated)...]
+2024-12-09 14:50:52.376 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 14:50:52.775 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservation", parameters={}
+2024-12-09 14:50:52.776 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#reservationForm(Model)
+2024-12-09 14:50:52.779 [http-nio-8080-exec-8] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-12-09 14:50:52.783 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 14:50:52.853 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservationslog", parameters={}
+2024-12-09 14:50:52.853 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservationsLog()
+2024-12-09 14:50:52.853 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 14:50:52.853 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[DMA 11/21 B4_hayashi deleted 11/19 15:28:02, DMA 11/27 B4_hayashi reserved 11/19 15:28:36, DMA 11/2 (truncated)...]
+2024-12-09 14:50:52.854 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 14:50:52.878 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservations", parameters={}
+2024-12-09 14:50:52.879 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservations()
+2024-12-09 14:50:52.880 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 14:50:52.880 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[name=松本研&startDate=2024/11/19/10:00&endDate=2024/11/19/18:00&equipmentType=DSC&id=-2081583873&detai (truncated)...]
+2024-12-09 14:50:52.881 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 14:51:08.890 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservation/edit?id=-2069346701&name=ff&startDate=2024-12-09%2010%3A00&endDate=2024-12-09%2018%3A00&equipmentType=INSTRON&details=", parameters={masked}
+2024-12-09 14:51:08.891 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#reservationEdit(String, String, String, String, String, String)
+2024-12-09 14:51:08.896 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-12-09 14:51:08.896 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing ["edit-success"]
+2024-12-09 14:51:08.897 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 14:51:08.905 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservations", parameters={}
+2024-12-09 14:51:08.906 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservations()
+2024-12-09 14:51:08.908 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 14:51:08.909 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[name=松本研&startDate=2024/11/19/10:00&endDate=2024/11/19/18:00&equipmentType=DSC&id=-2081583873&detai (truncated)...]
+2024-12-09 14:51:08.910 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 14:51:09.309 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservation", parameters={}
+2024-12-09 14:51:09.310 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#reservationForm(Model)
+2024-12-09 14:51:09.312 [http-nio-8080-exec-4] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-12-09 14:51:09.314 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 14:51:09.379 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservationslog", parameters={}
+2024-12-09 14:51:09.379 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservationsLog()
+2024-12-09 14:51:09.379 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 14:51:09.380 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[DMA 11/27 B4_hayashi reserved 11/19 15:28:36, DMA 11/28 moriyama reserved 11/19 15:29:24, DSC 11/28 (truncated)...]
+2024-12-09 14:51:09.380 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 14:51:09.406 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservations", parameters={}
+2024-12-09 14:51:09.407 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservations()
+2024-12-09 14:51:09.408 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 14:51:09.409 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[name=松本研&startDate=2024/11/19/10:00&endDate=2024/11/19/18:00&equipmentType=DSC&id=-2081583873&detai (truncated)...]
+2024-12-09 14:51:09.410 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 15:17:38.111 [main] INFO  com.example.myapp.Main - Starting Main using Java 21.0.2 with PID 74558 (/Users/yusuke/Desktop/Java/MyReservationApp/build/classes/java/main started by yusuke in /Users/yusuke/Desktop/Java/MyReservationApp)
+2024-12-09 15:17:38.111 [main] DEBUG com.example.myapp.Main - Running with Spring Boot v3.3.3, Spring v6.1.12
+2024-12-09 15:17:38.112 [main] INFO  com.example.myapp.Main - No active profile set, falling back to 1 default profile: "default"
+2024-12-09 15:17:38.465 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-12-09 15:17:38.469 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-12-09 15:17:38.471 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-12-09 15:17:38.472 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-12-09 15:17:38.497 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-12-09 15:17:38.498 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 367 ms
+2024-12-09 15:17:38.567 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 17 mappings in 'requestMappingHandlerMapping'
+2024-12-09 15:17:38.589 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-12-09 15:17:38.603 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-12-09 15:17:38.615 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-12-09 15:17:38.652 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-12-09 15:17:38.666 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-12-09 15:17:38.671 [main] INFO  com.example.myapp.Main - Started Main in 0.778 seconds (process running for 0.949)
+2024-12-09 15:17:42.208 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-09 15:17:42.209 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-12-09 15:17:42.209 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2024-12-09 15:17:42.209 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2024-12-09 15:17:42.209 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2024-12-09 15:17:42.210 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@1c0b972c
+2024-12-09 15:17:42.210 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@416bff1d
+2024-12-09 15:17:42.210 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-12-09 15:17:42.211 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-12-09 15:17:42.214 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservation", parameters={}
+2024-12-09 15:17:42.221 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#reservationForm(Model)
+2024-12-09 15:17:42.239 [http-nio-8080-exec-1] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-12-09 15:17:42.315 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 15:17:42.388 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/css/styles.css", parameters={}
+2024-12-09 15:17:42.390 [http-nio-8080-exec-2] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-12-09 15:17:42.395 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 15:17:42.748 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservationslog", parameters={}
+2024-12-09 15:17:42.749 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservationsLog()
+2024-12-09 15:17:42.753 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 15:17:42.754 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[DMA 11/27 B4_hayashi reserved 11/19 15:28:36, DMA 11/28 moriyama reserved 11/19 15:29:24, DSC 11/28 (truncated)...]
+2024-12-09 15:17:42.761 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 15:17:42.821 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservations", parameters={}
+2024-12-09 15:17:42.821 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservations()
+2024-12-09 15:17:42.824 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 15:17:42.825 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[name=松本研&startDate=2024/11/19/10:00&endDate=2024/11/19/18:00&equipmentType=DSC&id=-2081583873&detai (truncated)...]
+2024-12-09 15:17:42.848 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 15:17:50.774 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - POST "/reservation", parameters={masked}
+2024-12-09 15:17:50.775 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#reservationSubmit(ReservationElement)
+2024-12-09 15:17:50.796 [http-nio-8080-exec-6] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected '*/*' given [*/*]
+2024-12-09 15:17:50.800 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 15:17:50.803 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservations", parameters={}
+2024-12-09 15:17:50.804 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservations()
+2024-12-09 15:17:50.806 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 15:17:50.807 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[name=松本研&startDate=2024/11/19/10:00&endDate=2024/11/19/18:00&equipmentType=DSC&id=-2081583873&detai (truncated)...]
+2024-12-09 15:17:50.809 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 15:17:51.843 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservation/ggggggggggggg", parameters={}
+2024-12-09 15:17:51.844 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#ggggggggggggg()
+2024-12-09 15:17:51.847 [http-nio-8080-exec-8] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-12-09 15:17:51.853 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 15:17:51.861 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - GET "/css/ggstyles.css", parameters={}
+2024-12-09 15:17:51.863 [http-nio-8080-exec-9] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-12-09 15:17:51.864 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - GET "/images/hase.jpg", parameters={}
+2024-12-09 15:17:51.866 [http-nio-8080-exec-10] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-12-09 15:17:51.868 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 15:17:51.869 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 15:17:53.760 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservation", parameters={}
+2024-12-09 15:17:53.762 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#reservationForm(Model)
+2024-12-09 15:17:53.767 [http-nio-8080-exec-3] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-12-09 15:17:53.774 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 15:17:53.783 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/css/styles.css", parameters={}
+2024-12-09 15:17:53.783 [http-nio-8080-exec-4] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-12-09 15:17:53.786 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 304 NOT_MODIFIED
+2024-12-09 15:17:53.838 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservationslog", parameters={}
+2024-12-09 15:17:53.839 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservationsLog()
+2024-12-09 15:17:53.839 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 15:17:53.839 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[DMA 11/28 moriyama reserved 11/19 15:29:24, DSC 11/28 hara reserved 11/19 15:29:52, DMA 11/29 B4_ha (truncated)...]
+2024-12-09 15:17:53.840 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 15:17:53.867 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservations", parameters={}
+2024-12-09 15:17:53.867 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservations()
+2024-12-09 15:17:53.869 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 15:17:53.870 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[name=松本研&startDate=2024/11/19/10:00&endDate=2024/11/19/18:00&equipmentType=DSC&id=-2081583873&detai (truncated)...]
+2024-12-09 15:17:53.871 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 15:18:01.511 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservation/remove/-323623499", parameters={}
+2024-12-09 15:18:01.513 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#reservationRemove(String)
+2024-12-09 15:18:01.525 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-12-09 15:18:01.526 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing ["delete-success"]
+2024-12-09 15:18:01.527 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 15:18:01.531 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservations", parameters={}
+2024-12-09 15:18:01.532 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservations()
+2024-12-09 15:18:01.534 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 15:18:01.536 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[name=松本研&startDate=2024/11/19/10:00&endDate=2024/11/19/18:00&equipmentType=DSC&id=-2081583873&detai (truncated)...]
+2024-12-09 15:18:01.538 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 15:18:01.966 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservation", parameters={}
+2024-12-09 15:18:01.967 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#reservationForm(Model)
+2024-12-09 15:18:01.982 [http-nio-8080-exec-2] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-12-09 15:18:01.988 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 15:18:01.998 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/css/styles.css", parameters={}
+2024-12-09 15:18:01.999 [http-nio-8080-exec-1] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-12-09 15:18:02.000 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 304 NOT_MODIFIED
+2024-12-09 15:18:02.044 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservationslog", parameters={}
+2024-12-09 15:18:02.044 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservationsLog()
+2024-12-09 15:18:02.045 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 15:18:02.045 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[DSC 11/28 hara reserved 11/19 15:29:52, DMA 11/29 B4_hayashi reserved 11/19 15:30:51, DSC 11/29 nak (truncated)...]
+2024-12-09 15:18:02.045 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 15:18:02.070 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservations", parameters={}
+2024-12-09 15:18:02.070 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservations()
+2024-12-09 15:18:02.071 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 15:18:02.072 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[name=松本研&startDate=2024/11/19/10:00&endDate=2024/11/19/18:00&equipmentType=DSC&id=-2081583873&detai (truncated)...]
+2024-12-09 15:18:02.073 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 15:18:04.842 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservation/remove/-763592502", parameters={}
+2024-12-09 15:18:04.844 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#reservationRemove(String)
+2024-12-09 15:18:04.847 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-12-09 15:18:04.848 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing ["delete-success"]
+2024-12-09 15:18:04.855 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 15:18:04.859 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservations", parameters={}
+2024-12-09 15:18:04.860 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservations()
+2024-12-09 15:18:04.863 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 15:18:04.864 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[name=松本研&startDate=2024/11/19/10:00&endDate=2024/11/19/18:00&equipmentType=DSC&id=-2081583873&detai (truncated)...]
+2024-12-09 15:18:04.866 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 15:18:05.206 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservation", parameters={}
+2024-12-09 15:18:05.207 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#reservationForm(Model)
+2024-12-09 15:18:05.210 [http-nio-8080-exec-9] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-12-09 15:18:05.212 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 15:18:05.225 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - GET "/css/styles.css", parameters={}
+2024-12-09 15:18:05.226 [http-nio-8080-exec-10] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-12-09 15:18:05.226 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Completed 304 NOT_MODIFIED
+2024-12-09 15:18:05.270 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservationslog", parameters={}
+2024-12-09 15:18:05.271 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservationsLog()
+2024-12-09 15:18:05.271 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 15:18:05.271 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[DMA 11/29 B4_hayashi reserved 11/19 15:30:51, DSC 11/29 nakasaka reserved 11/19 15:31:13, DSC 12/02 (truncated)...]
+2024-12-09 15:18:05.271 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 15:18:05.296 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservations", parameters={}
+2024-12-09 15:18:05.297 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservations()
+2024-12-09 15:18:05.298 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 15:18:05.299 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[name=松本研&startDate=2024/11/19/10:00&endDate=2024/11/19/18:00&equipmentType=DSC&id=-2081583873&detai (truncated)...]
+2024-12-09 15:18:05.301 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 15:18:13.203 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - POST "/reservation", parameters={masked}
+2024-12-09 15:18:13.204 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#reservationSubmit(ReservationElement)
+2024-12-09 15:18:13.208 [http-nio-8080-exec-6] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected '*/*' given [*/*]
+2024-12-09 15:18:13.212 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 15:18:13.219 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservations", parameters={}
+2024-12-09 15:18:13.220 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservations()
+2024-12-09 15:18:13.221 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 15:18:13.222 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[name=松本研&startDate=2024/11/19/10:00&endDate=2024/11/19/18:00&equipmentType=DSC&id=-2081583873&detai (truncated)...]
+2024-12-09 15:18:13.223 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 15:18:13.657 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservation/ggggggggggggg", parameters={}
+2024-12-09 15:18:13.658 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#ggggggggggggg()
+2024-12-09 15:18:13.659 [http-nio-8080-exec-7] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-12-09 15:18:13.660 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 15:18:13.678 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - GET "/images/hase.jpg", parameters={}
+2024-12-09 15:18:13.679 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - GET "/css/ggstyles.css", parameters={}
+2024-12-09 15:18:13.679 [http-nio-8080-exec-8] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-12-09 15:18:13.680 [http-nio-8080-exec-9] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-12-09 15:18:13.680 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 304 NOT_MODIFIED
+2024-12-09 15:18:13.680 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 304 NOT_MODIFIED
+2024-12-09 15:18:15.631 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservation", parameters={}
+2024-12-09 15:18:15.632 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#reservationForm(Model)
+2024-12-09 15:18:15.636 [http-nio-8080-exec-10] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-12-09 15:18:15.640 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 15:18:15.649 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/css/styles.css", parameters={}
+2024-12-09 15:18:15.650 [http-nio-8080-exec-2] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-12-09 15:18:15.651 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 304 NOT_MODIFIED
+2024-12-09 15:18:15.712 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservationslog", parameters={}
+2024-12-09 15:18:15.713 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservationsLog()
+2024-12-09 15:18:15.713 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 15:18:15.714 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[DSC 11/29 nakasaka reserved 11/19 15:31:13, DSC 12/02 B4_hayashi reserved 11/19 15:31:49, DMA 12/02 (truncated)...]
+2024-12-09 15:18:15.714 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 15:18:15.743 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservations", parameters={}
+2024-12-09 15:18:15.743 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservations()
+2024-12-09 15:18:15.744 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 15:18:15.745 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[name=松本研&startDate=2024/11/19/10:00&endDate=2024/11/19/18:00&equipmentType=DSC&id=-2081583873&detai (truncated)...]
+2024-12-09 15:18:15.745 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 15:18:19.530 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservation", parameters={}
+2024-12-09 15:18:19.531 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#reservationForm(Model)
+2024-12-09 15:18:19.536 [http-nio-8080-exec-5] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-12-09 15:18:19.542 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 15:18:19.555 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/css/styles.css", parameters={}
+2024-12-09 15:18:19.555 [http-nio-8080-exec-7] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-12-09 15:18:19.556 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 304 NOT_MODIFIED
+2024-12-09 15:18:19.599 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservationslog", parameters={}
+2024-12-09 15:18:19.599 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservationsLog()
+2024-12-09 15:18:19.600 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 15:18:19.600 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[DSC 11/29 nakasaka reserved 11/19 15:31:13, DSC 12/02 B4_hayashi reserved 11/19 15:31:49, DMA 12/02 (truncated)...]
+2024-12-09 15:18:19.600 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 15:18:19.636 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservations", parameters={}
+2024-12-09 15:18:19.637 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservations()
+2024-12-09 15:18:19.638 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 15:18:19.639 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[name=松本研&startDate=2024/11/19/10:00&endDate=2024/11/19/18:00&equipmentType=DSC&id=-2081583873&detai (truncated)...]
+2024-12-09 15:18:19.639 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 15:18:24.805 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservation/edit?id=-1638557088&name=hasegawa&startDate=2024-12-09%2010%3A00&endDate=2024-12-09%2018%3A00&equipmentType=%E6%B7%B7%E7%B7%B4%E6%A9%9F&details=", parameters={masked}
+2024-12-09 15:18:24.806 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#reservationEdit(String, String, String, String, String, String)
+2024-12-09 15:18:24.817 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-12-09 15:18:24.818 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing ["edit-success"]
+2024-12-09 15:18:24.818 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 15:18:24.823 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservations", parameters={}
+2024-12-09 15:18:24.824 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservations()
+2024-12-09 15:18:24.826 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 15:18:24.827 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[name=松本研&startDate=2024/11/19/10:00&endDate=2024/11/19/18:00&equipmentType=DSC&id=-2081583873&detai (truncated)...]
+2024-12-09 15:18:24.828 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 15:18:25.576 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservation/ggggggggggggg", parameters={}
+2024-12-09 15:18:25.577 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#ggggggggggggg()
+2024-12-09 15:18:25.578 [http-nio-8080-exec-6] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-12-09 15:18:25.579 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 15:18:25.601 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/css/ggstyles.css", parameters={}
+2024-12-09 15:18:25.602 [http-nio-8080-exec-4] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-12-09 15:18:25.603 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 304 NOT_MODIFIED
+2024-12-09 15:18:25.603 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/images/hase.jpg", parameters={}
+2024-12-09 15:18:25.604 [http-nio-8080-exec-5] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-12-09 15:18:25.605 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 304 NOT_MODIFIED
+2024-12-09 15:18:27.303 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservation", parameters={}
+2024-12-09 15:18:27.303 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#reservationForm(Model)
+2024-12-09 15:18:27.304 [http-nio-8080-exec-7] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-12-09 15:18:27.305 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 15:18:27.315 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - GET "/css/styles.css", parameters={}
+2024-12-09 15:18:27.316 [http-nio-8080-exec-9] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-12-09 15:18:27.316 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 304 NOT_MODIFIED
+2024-12-09 15:18:27.360 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservationslog", parameters={}
+2024-12-09 15:18:27.361 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservationsLog()
+2024-12-09 15:18:27.361 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 15:18:27.361 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[DSC 12/02 B4_hayashi reserved 11/19 15:31:49, DMA 12/02 B4_hayashi reserved 11/19 15:32:09, DMA 12/ (truncated)...]
+2024-12-09 15:18:27.361 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 15:18:27.387 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservations", parameters={}
+2024-12-09 15:18:27.388 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservations()
+2024-12-09 15:18:27.389 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 15:18:27.389 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[name=松本研&startDate=2024/11/19/10:00&endDate=2024/11/19/18:00&equipmentType=DSC&id=-2081583873&detai (truncated)...]
+2024-12-09 15:18:27.389 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 15:18:30.628 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservation/remove/-1638557088", parameters={}
+2024-12-09 15:18:30.629 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#reservationRemove(String)
+2024-12-09 15:18:30.632 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-12-09 15:18:30.633 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing ["delete-success"]
+2024-12-09 15:18:30.634 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 15:18:30.639 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservations", parameters={}
+2024-12-09 15:18:30.640 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservations()
+2024-12-09 15:18:30.641 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 15:18:30.642 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[name=松本研&startDate=2024/11/19/10:00&endDate=2024/11/19/18:00&equipmentType=DSC&id=-2081583873&detai (truncated)...]
+2024-12-09 15:18:30.644 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 15:18:30.992 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservation", parameters={}
+2024-12-09 15:18:30.992 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#reservationForm(Model)
+2024-12-09 15:18:30.995 [http-nio-8080-exec-6] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-12-09 15:18:30.996 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 15:18:31.040 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservationslog", parameters={}
+2024-12-09 15:18:31.040 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservationsLog()
+2024-12-09 15:18:31.040 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 15:18:31.040 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[DMA 12/02 B4_hayashi reserved 11/19 15:32:09, DMA 12/04 B4_hayashi reserved 11/19 15:32:34, DSC 12/ (truncated)...]
+2024-12-09 15:18:31.041 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 15:18:31.061 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservations", parameters={}
+2024-12-09 15:18:31.062 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservations()
+2024-12-09 15:18:31.063 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 15:18:31.063 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[name=松本研&startDate=2024/11/19/10:00&endDate=2024/11/19/18:00&equipmentType=DSC&id=-2081583873&detai (truncated)...]
+2024-12-09 15:18:31.064 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 15:42:21.975 [main] INFO  com.example.myapp.Main - Starting Main using Java 21.0.2 with PID 75308 (/Users/yusuke/Desktop/Java/MyReservationApp/build/classes/java/main started by yusuke in /Users/yusuke/Desktop/Java/MyReservationApp)
+2024-12-09 15:42:21.976 [main] DEBUG com.example.myapp.Main - Running with Spring Boot v3.3.3, Spring v6.1.12
+2024-12-09 15:42:21.976 [main] INFO  com.example.myapp.Main - No active profile set, falling back to 1 default profile: "default"
+2024-12-09 15:42:22.331 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-12-09 15:42:22.335 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-12-09 15:42:22.338 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-12-09 15:42:22.338 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-12-09 15:42:22.364 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-12-09 15:42:22.365 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 363 ms
+2024-12-09 15:42:22.435 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 17 mappings in 'requestMappingHandlerMapping'
+2024-12-09 15:42:22.457 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-12-09 15:42:22.471 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-12-09 15:42:22.482 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-12-09 15:42:22.510 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-12-09 15:42:22.522 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-12-09 15:42:22.527 [main] INFO  com.example.myapp.Main - Started Main in 0.822 seconds (process running for 1.101)
+2024-12-09 15:42:33.113 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-09 15:42:33.113 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-12-09 15:42:33.113 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2024-12-09 15:42:33.113 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2024-12-09 15:42:33.114 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2024-12-09 15:42:33.114 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@301b74a4
+2024-12-09 15:42:33.114 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@284ba50a
+2024-12-09 15:42:33.114 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-12-09 15:42:33.114 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-12-09 15:42:33.122 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservation", parameters={}
+2024-12-09 15:42:33.131 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#reservationForm(Model)
+2024-12-09 15:42:33.156 [http-nio-8080-exec-1] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-12-09 15:42:33.249 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 15:42:33.252 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/css/styles.css", parameters={}
+2024-12-09 15:42:33.254 [http-nio-8080-exec-2] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-12-09 15:42:33.258 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 15:42:33.317 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservationslog", parameters={}
+2024-12-09 15:42:33.318 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservationsLog()
+2024-12-09 15:42:33.323 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 15:42:33.324 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[DMA 12/02 B4_hayashi reserved 11/19 15:32:09, DMA 12/04 B4_hayashi reserved 11/19 15:32:34, DSC 12/ (truncated)...]
+2024-12-09 15:42:33.332 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 15:42:33.366 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservations", parameters={}
+2024-12-09 15:42:33.367 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservations()
+2024-12-09 15:42:33.369 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 15:42:33.370 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[name=松本研&startDate=2024/11/19/10:00&endDate=2024/11/19/18:00&equipmentType=DSC&id=-2081583873&detai (truncated)...]
+2024-12-09 15:42:33.386 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 15:49:52.795 [main] INFO  com.example.myapp.Main - Starting Main using Java 21.0.2 with PID 75715 (/Users/yusuke/Desktop/Java/MyReservationApp/build/classes/java/main started by yusuke in /Users/yusuke/Desktop/Java/MyReservationApp)
+2024-12-09 15:49:52.796 [main] DEBUG com.example.myapp.Main - Running with Spring Boot v3.3.3, Spring v6.1.12
+2024-12-09 15:49:52.796 [main] INFO  com.example.myapp.Main - No active profile set, falling back to 1 default profile: "default"
+2024-12-09 15:49:53.144 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-12-09 15:49:53.149 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-12-09 15:49:53.151 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-12-09 15:49:53.151 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-12-09 15:49:53.176 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-12-09 15:49:53.176 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 361 ms
+2024-12-09 15:49:53.248 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 17 mappings in 'requestMappingHandlerMapping'
+2024-12-09 15:49:53.271 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-12-09 15:49:53.284 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-12-09 15:49:53.296 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-12-09 15:49:53.325 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-12-09 15:49:53.337 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-12-09 15:49:53.341 [main] INFO  com.example.myapp.Main - Started Main in 0.816 seconds (process running for 1.071)
+2024-12-09 15:50:01.302 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-09 15:50:01.303 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-12-09 15:50:01.303 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2024-12-09 15:50:01.303 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2024-12-09 15:50:01.303 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2024-12-09 15:50:01.304 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@2743d7f8
+2024-12-09 15:50:01.304 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@4ccd2fa0
+2024-12-09 15:50:01.305 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-12-09 15:50:01.305 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2024-12-09 15:50:01.310 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservation", parameters={}
+2024-12-09 15:50:01.318 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#reservationForm(Model)
+2024-12-09 15:50:01.337 [http-nio-8080-exec-1] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-12-09 15:50:01.417 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 15:50:01.422 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/css/styles.css", parameters={}
+2024-12-09 15:50:01.424 [http-nio-8080-exec-2] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-12-09 15:50:01.429 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 15:50:01.494 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservationslog", parameters={}
+2024-12-09 15:50:01.494 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservationsLog()
+2024-12-09 15:50:01.499 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 15:50:01.500 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[DMA 12/02 B4_hayashi reserved 11/19 15:32:09, DMA 12/04 B4_hayashi reserved 11/19 15:32:34, DSC 12/ (truncated)...]
+2024-12-09 15:50:01.506 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 15:50:01.543 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservations", parameters={}
+2024-12-09 15:50:01.543 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservations()
+2024-12-09 15:50:01.545 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 15:50:01.546 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[name=松本研&startDate=2024/11/19/10:00&endDate=2024/11/19/18:00&equipmentType=DSC&id=-2081583873&detai (truncated)...]
+2024-12-09 15:50:01.561 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 15:50:23.192 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservation", parameters={}
+2024-12-09 15:50:23.194 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#reservationForm(Model)
+2024-12-09 15:50:23.204 [http-nio-8080-exec-6] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-12-09 15:50:23.210 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 15:50:23.225 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/css/styles.css", parameters={}
+2024-12-09 15:50:23.226 [http-nio-8080-exec-7] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-12-09 15:50:23.227 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 15:50:23.581 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservationslog", parameters={}
+2024-12-09 15:50:23.582 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservationsLog()
+2024-12-09 15:50:23.582 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 15:50:23.582 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[DMA 12/02 B4_hayashi reserved 11/19 15:32:09, DMA 12/04 B4_hayashi reserved 11/19 15:32:34, DSC 12/ (truncated)...]
+2024-12-09 15:50:23.582 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 15:50:23.614 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservations", parameters={}
+2024-12-09 15:50:23.614 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservations()
+2024-12-09 15:50:23.616 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 15:50:23.617 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[name=松本研&startDate=2024/11/19/10:00&endDate=2024/11/19/18:00&equipmentType=DSC&id=-2081583873&detai (truncated)...]
+2024-12-09 15:50:23.618 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 15:53:11.417 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservation", parameters={}
+2024-12-09 15:53:11.418 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#reservationForm(Model)
+2024-12-09 15:53:11.427 [http-nio-8080-exec-2] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-12-09 15:53:11.433 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 15:53:11.475 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/css/styles.css", parameters={}
+2024-12-09 15:53:11.476 [http-nio-8080-exec-3] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-12-09 15:53:11.477 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 304 NOT_MODIFIED
+2024-12-09 15:53:11.535 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservationslog", parameters={}
+2024-12-09 15:53:11.536 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservationsLog()
+2024-12-09 15:53:11.537 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 15:53:11.537 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[DMA 12/02 B4_hayashi reserved 11/19 15:32:09, DMA 12/04 B4_hayashi reserved 11/19 15:32:34, DSC 12/ (truncated)...]
+2024-12-09 15:53:11.538 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 15:53:11.585 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservations", parameters={}
+2024-12-09 15:53:11.586 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservations()
+2024-12-09 15:53:11.589 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 15:53:11.593 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[name=松本研&startDate=2024/11/19/10:00&endDate=2024/11/19/18:00&equipmentType=DSC&id=-2081583873&detai (truncated)...]
+2024-12-09 15:53:11.596 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 15:53:14.001 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservation", parameters={}
+2024-12-09 15:53:14.003 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#reservationForm(Model)
+2024-12-09 15:53:14.010 [http-nio-8080-exec-6] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-12-09 15:53:14.021 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 15:53:14.055 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservationslog", parameters={}
+2024-12-09 15:53:14.056 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservationsLog()
+2024-12-09 15:53:14.056 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 15:53:14.056 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[DMA 12/02 B4_hayashi reserved 11/19 15:32:09, DMA 12/04 B4_hayashi reserved 11/19 15:32:34, DSC 12/ (truncated)...]
+2024-12-09 15:53:14.057 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 15:53:14.081 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservations", parameters={}
+2024-12-09 15:53:14.082 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservations()
+2024-12-09 15:53:14.083 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 15:53:14.084 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[name=松本研&startDate=2024/11/19/10:00&endDate=2024/11/19/18:00&equipmentType=DSC&id=-2081583873&detai (truncated)...]
+2024-12-09 15:53:14.086 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 15:56:17.136 [main] INFO  com.example.myapp.Main - Starting Main using Java 21.0.2 with PID 76087 (/Users/yusuke/Desktop/Java/MyReservationApp/build/classes/java/main started by yusuke in /Users/yusuke/Desktop/Java/MyReservationApp)
+2024-12-09 15:56:17.136 [main] DEBUG com.example.myapp.Main - Running with Spring Boot v3.3.3, Spring v6.1.12
+2024-12-09 15:56:17.137 [main] INFO  com.example.myapp.Main - No active profile set, falling back to 1 default profile: "default"
+2024-12-09 15:56:17.482 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-12-09 15:56:17.487 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-12-09 15:56:17.489 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-12-09 15:56:17.489 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-12-09 15:56:17.511 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-12-09 15:56:17.511 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 358 ms
+2024-12-09 15:56:17.582 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 17 mappings in 'requestMappingHandlerMapping'
+2024-12-09 15:56:17.607 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-12-09 15:56:17.620 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-12-09 15:56:17.630 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-12-09 15:56:17.657 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-12-09 15:56:17.670 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-12-09 15:56:17.674 [main] INFO  com.example.myapp.Main - Started Main in 0.804 seconds (process running for 0.979)
+2024-12-09 15:56:22.284 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-09 15:56:22.284 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-12-09 15:56:22.285 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2024-12-09 15:56:22.285 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2024-12-09 15:56:22.285 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2024-12-09 15:56:22.285 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@5a3c4560
+2024-12-09 15:56:22.285 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@2bc9f52
+2024-12-09 15:56:22.285 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-12-09 15:56:22.285 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-12-09 15:56:22.289 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservation", parameters={}
+2024-12-09 15:56:22.296 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#reservationForm(Model)
+2024-12-09 15:56:22.315 [http-nio-8080-exec-1] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-12-09 15:56:22.388 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 15:56:22.410 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/css/styles.css", parameters={}
+2024-12-09 15:56:22.412 [http-nio-8080-exec-2] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-12-09 15:56:22.416 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 15:56:22.462 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservationslog", parameters={}
+2024-12-09 15:56:22.463 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservationsLog()
+2024-12-09 15:56:22.468 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 15:56:22.470 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[DMA 12/02 B4_hayashi reserved 11/19 15:32:09, DMA 12/04 B4_hayashi reserved 11/19 15:32:34, DSC 12/ (truncated)...]
+2024-12-09 15:56:22.477 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-12-09 15:56:22.488 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/reservations", parameters={}
+2024-12-09 15:56:22.488 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.myapp.ReservationController#getReservations()
+2024-12-09 15:56:22.491 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-12-09 15:56:22.492 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[name=松本研&startDate=2024/11/19/10:00&endDate=2024/11/19/18:00&equipmentType=DSC&id=-2081583873&detai (truncated)...]
+2024-12-09 15:56:22.510 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK

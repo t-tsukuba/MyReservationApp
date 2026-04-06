@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Website</title>
+    <link rel="stylesheet" href="/css/ggstyles.css">
+</head>
+<body>
+<a href="/reservation" id="back-url">Back to Reservation Form</a>
+<p></p>
+<img src="/images/hase.jpg" alt="Sample Image" class="fade-in-image">
+
+<!-- 警告メッセージのモーダルウィンドウのテンプレート -->
+<div id="warning-template" class="modal" style="display: none;">
+    <div class="modal-content">
+        <span class="close-button" onclick="this.parentElement.parentElement.style.display='none'">&times;</span>
+        <div class="warning-message"></div>
+        <img class="modal-image" src="" alt="Warning Image" style="width: 50%; height: auto;">
+    </div>
+</div>
+</body>
+
+<script>
+    // モーダルウィンドウを表示する関数
+    function showModal(message, imageUrl, index, delay) {
+        setTimeout(function() {
+            var modalTemplate = document.getElementById("warning-template");
+            var modalClone = modalTemplate.cloneNode(true);
+            modalClone.id = "warning-modal-" + index;
+            modalClone.querySelector(".warning-message").innerHTML = message;
+            modalClone.querySelector(".modal-image").src = imageUrl;
+
+            // 一旦DOMに追加してから高さと幅を取得
+            document.body.appendChild(modalClone);
+            modalClone.style.display = "block";
+
+            // ランダムな位置を計算（制限付き）
+            var windowHeight = window.innerHeight;
+            var windowWidth = window.innerWidth;
+            var modalHeight = modalClone.offsetHeight;
+            var modalWidth = modalClone.offsetWidth;
+
+            // ポップアップ座標の制限範囲を設定
+            var minTop =200; // 上から50px以上
+            var maxTop = windowHeight - modalHeight - 200; // 下から50px以上
+            var minLeft = 600; // 左から50px以上
+            var maxLeft = windowWidth - modalWidth - 500; // 右から50px以上
+
+            var top = Math.random() * (maxTop - minTop) + minTop;
+            var left = Math.random() * (maxLeft - minLeft) + minLeft;
+
+            modalClone.style.top = top + 'px';
+            modalClone.style.left = left + 'px';
+        }, delay);
+    }
+
+    // ページが読み込まれたときに複数のモーダルウィンドウを表示
+    window.onload = function() {
+        var warningMessage = "これは『はせがわ』ですか？";
+        var imageUrl = "/images/hase.jpg";
+        for (var i = 0; i < 20; i++) {
+            var delay = i * 500; // 500ミリ秒ごとにポップアップ
+            showModal(warningMessage, imageUrl, i, delay);
+        }
+    };
+</script>
+
+</html>
