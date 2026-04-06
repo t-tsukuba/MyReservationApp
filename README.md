@@ -19,8 +19,3 @@
 ## Raspberry Pi でのビルド・実行手順 (Raspberry Pi Deployment)
 
 以下の手順に従って、Raspberry Pi上でアプリケーションを直接ビルドし、起動します。
-
-### 1. プロジェクトディレクトリへの移動
-カレントディレクトリをアプリケーションのルートフォルダに変更します。
-```bash
-cd /home/hiejima/Desktop/MyReservationApp
